@@ -28,7 +28,7 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_book = load_lottieurl('https://assets4.lottiefiles.com/temp/lf20_aKAfIn.json')
-st_lottie(lottie_book, speed=1, height=200, key="initial")
+# st_lottie(lottie_book, speed=1, height=200, key="initial")
 
 
 matplotlib.use("agg")
@@ -42,12 +42,10 @@ row0_spacer1, row0_1, row0_spacer2, row0_2, row0_spacer3 = st.columns(
 
 row0_1.title('Analyzing Your Goodreads Reading Habits')
 
-
 with row0_2:
     st.write('')
+    st_lottie(lottie_book, speed=1, height=200, key="initial")
 
-row0_2.subheader(
-    '')
 
 
 row2_spacer1, row2_1, row2_spacer2 = st.columns((.1, 3.2, .1))
